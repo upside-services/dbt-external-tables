@@ -32,4 +32,4 @@
     {% if external.integration -%} integration = '{{external.integration}}' {%- endif %}
     {% if external.refresh_on_create -%} refresh_on_create = {{external.refresh_on_create}} {%- endif %}
     file_format = {{external.file_format}}
-{% endmacro %}
+{% endmacro %} 
