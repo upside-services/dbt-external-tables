@@ -14,7 +14,6 @@ sources:
           location: "@raw.snowplow.snowplow"  # reference an existing external stage
           file_format: "( type = json )"      # fully specified here, or reference an existing file format
           auto_refresh: true                  # requires configuring an event notification from Amazon S3 or Azure
-          refresh_on_create: "false"
           partitions:
             - name: collector_hour
               data_type: timestamp
