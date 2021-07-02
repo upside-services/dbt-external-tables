@@ -52,6 +52,20 @@ sources:
           partitions: *parts-of-the-people
         columns: *cols-of-the-people
         tests: *equal-to-the-people
+
+      - name: people_json_no_refresh_on_create
+        external: 
+          <<: *json-people
+          refresh_on_create: "false"
+        columns: *cols-of-the-people
+        tests: *equal-to-the-people
+
+      - name: people_json_refresh_on_create
+        external: 
+          <<: *json-people
+          refresh_on_create: "true" # Snowflake defaults to this 
+        columns: *cols-of-the-people
+        tests: *equal-to-the-people
         
       - name: people_json_snowpipe
         external:
